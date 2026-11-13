@@ -5,4 +5,4 @@
 - Lớp: L3A
 - Chủ đề và corpus: Truy xuất kiến thức từ Python Tutorial 3.13.7 (Python Software Foundation)
 - Repo bài nộp: https://github.com/nguyencongquana2/K5-L3A-DAY06-NguyenCongQuan-2A202603675-DataIngestion
-- Commit chốt bài: Cập nhật sau khi hoàn tất benchmark
+- Commit chốt bài: main HEAD sau commit `checkpoint 4:00 finalize reproducible submission`

@@ -1,47 +1,57 @@
-# Day 06 · Data Ingestion Engineering
+# Python Tutorial Data Ingestion Benchmark
 
-**Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
+Bài làm cá nhân Day 06 của Nguyễn Công Quân (`2A202603675`). Pipeline đọc Python Tutorial 3.13.7, so sánh fixed-window với paragraph-aware chunking và metadata filtering, tạo embedding local bằng `all-MiniLM-L6-v2`, rồi lưu/tìm kiếm bằng Chroma.
 
-Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.
+## Kết quả chính
 
-| 📄 Dữ liệu | 🧩 Chiến lược | 🎯 Benchmark |
-|---|---|---|
-| Tối thiểu **30 trang nội dung** | Tối thiểu **3 cấu hình** | Tối thiểu **20 câu hỏi** |
+| Strategy | Chunking / filter | Dev Hit@1 | Dev Hit@3 | Test Hit@1 | Test Hit@3 | Coherence |
+|---|---|---:|---:|---:|---:|---:|
+| A | 800 ký tự, overlap 120 | 6/15 | 10/15 | 4/5 | 5/5 | 1.1/2 |
+| B | PDF paragraph blocks, max 1000 | 9/15 | 13/15 | 3/5 | 5/5 | 1.8/2 |
+| C | Như B + `category` filter | 9/15 | 13/15 | 3/5 | 5/5 | 1.8/2 |
 
-## Bắt đầu nhanh
+B được chọn theo tiêu chí đã chốt trên dev: Evidence Hit@3 trước, sau đó Hit@1, grounding và tài nguyên. Test chỉ có năm câu nên không dùng để tuyên bố ưu thế tổng quát.
 
-Dùng [starter PostgreSQL + pgvector](starter/README.md) để dựng database và hoàn thiện các hàm TODO, hoặc tự chọn vector store tương đương. Starter chỉ là khung: **bạn tự hiện thực pipeline và benchmark**.
+## Dữ liệu
 
-## 1. Xây pipeline
+- Nguồn: Python Tutorial 3.13.7, Python Software Foundation License Version 2.
+- PDF: 167 trang vật lý; 101 trang nội dung hợp lệ theo quy tắc trong `data/manifest.json`.
+- SHA-256, URL, giấy phép, page inventory và category nằm trong manifest.
+- `data/source/tutorial.pdf` được giữ trong repo để chạy lại đúng snapshot.
 
-![Đọc tài liệu, chuẩn hóa, chia chunk, tạo vector, lưu và kiểm tra](assets/ingestion-pipeline.svg)
+## Cài đặt và chạy
 
-Chọn tài liệu được phép sử dụng; giữ **ID tài liệu, nguồn, trang/vị trí** và metadata phù hợp. Dùng embedding model thật qua API hoặc chạy local; lưu và truy xuất bằng pgvector, Qdrant, Chroma hoặc một store tương đương.
+Yêu cầu Python 3.11–3.14 và kết nối Internet trong lần đầu để tải model embedding. Không cần Docker hoặc API key.
 
-## 2. So sánh và đánh giá
+```powershell
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r starter\requirements.txt
+.venv\Scripts\python.exe starter\scripts\check_setup.py
+.venv\Scripts\python.exe starter\scripts\validate_benchmark.py
+cd starter
+..\.venv\Scripts\python.exe -m pytest -q
+..\.venv\Scripts\python.exe -m src.run --reindex
+..\.venv\Scripts\python.exe scripts\audit_results.py
+```
 
-![Ba chiến lược được đánh giá trên cùng corpus và benchmark dev/test](assets/benchmark-workflow.svg)
+Sau khi model đã có trong Hugging Face cache, có thể chặn kiểm tra mạng bằng:
 
-Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **15 câu dev / 5 câu test** trước khi chạy; chọn cấu hình trên dev, rồi đánh giá test sau khi cố định. Mỗi câu hỏi cần có đoạn bằng chứng và trang nguồn; thiết kế bộ câu hỏi và đánh giá theo [BENCHMARK.md](BENCHMARK.md).
+```powershell
+$env:HF_HUB_OFFLINE='1'
+$env:TRANSFORMERS_OFFLINE='1'
+```
 
-Đánh giá theo năm khía cạnh: **độ chính xác truy xuất**, **tính mạch lạc của chunk**, **tính hữu dụng của metadata**, **chất lượng grounding** và **tác động của chiến lược dữ liệu**. Giải thích lựa chọn bằng kết quả, ví dụ lỗi và các đánh đổi.
+`--skip-test` chỉ chạy dev trong giai đoạn thử nghiệm. Không dùng test để chỉnh tham số. Chroma lưu bền vững tại `starter/.chroma/` (không commit); stable chunk IDs và upsert ngăn nhân bản.
 
-## 3. Chuẩn bị bài nộp
+## Artifacts
 
-1. Chạy pipeline và lưu cấu hình, kết quả top-3, trace cùng nhãn đánh giá thủ công.
-2. Điền [thông tin học viên](STUDENT.md), [nhật ký thí nghiệm](artifacts/experiment_log.csv) và bản sao [mẫu báo cáo cá nhân](report/individual/MSSV_HoTen.md).
-3. Kiểm tra mã nguồn, cách chạy, manifest dữ liệu và checklist trong [SUBMISSION.md](SUBMISSION.md).
+- Corpus manifest: [`data/manifest.json`](data/manifest.json)
+- Benchmark/gold: [`benchmark/questions.json`](benchmark/questions.json)
+- Cấu hình: [`artifacts/experiment_log.csv`](artifacts/experiment_log.csv)
+- Top-3 trace: [`results/traces.jsonl`](results/traces.jsonl)
+- Metrics: [`results/metrics.json`](results/metrics.json)
+- Audit labels: [`results/manual_audit.json`](results/manual_audit.json)
+- Phân tích năm khía cạnh: [`results/analysis.md`](results/analysis.md)
+- Báo cáo cá nhân: [`report/individual/2A202603675_NguyenCongQuan.md`](report/individual/2A202603675_NguyenCongQuan.md)
 
-## Tài liệu hướng dẫn
-
-| Bạn cần tìm | Tài liệu |
-|---|---|
-| Setup baseline PostgreSQL + pgvector | [starter/README.md](starter/README.md) |
-| Các bước làm và cách tính chỉ số | [GUIDE.md](GUIDE.md) |
-| Tiến độ trong 4 giờ | [CHECKPOINTS.md](CHECKPOINTS.md) |
-| Năm tiêu chí benchmark và bộ câu hỏi | [BENCHMARK.md](BENCHMARK.md) |
-| Tiêu chí chấm điểm | [RUBRIC.md](RUBRIC.md) |
-| Quy tắc sử dụng dữ liệu, AI và API | [RULES.md](RULES.md) |
-| Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
-
-[data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+Chi tiết implementation và tham số nằm trong [`starter/README.md`](starter/README.md). Định nghĩa metric gốc vẫn xem tại [`GUIDE.md`](GUIDE.md) và [`BENCHMARK.md`](BENCHMARK.md).
