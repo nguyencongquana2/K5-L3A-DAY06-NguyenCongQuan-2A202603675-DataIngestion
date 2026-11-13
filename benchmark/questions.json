@@ -1,0 +1,222 @@
+[
+  {
+    "id": "q01",
+    "type": "direct",
+    "split": "dev",
+    "question": "Where does Python store command-line arguments passed after the script name?",
+    "expected_answer": "They are stored as a list of strings in sys.argv.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 12,
+    "evidence_quote": "additional arguments thereafter are turned into a list of strings and assigned to the argv variable in the sys module",
+    "filter": null
+  },
+  {
+    "id": "q02",
+    "type": "paraphrase",
+    "split": "dev",
+    "question": "Why does assigning a new value to one position in a Python string fail?",
+    "expected_answer": "Python strings are immutable.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 18,
+    "evidence_quote": "Python strings cannot be changed — they are immutable. Therefore, assigning to an indexed position in the string results in an error",
+    "filter": null
+  },
+  {
+    "id": "q03",
+    "type": "direct",
+    "split": "dev",
+    "question": "What does list.append(x) do?",
+    "expected_answer": "It adds x to the end of the list.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 39,
+    "evidence_quote": "list.append(x) Add an item to the end of the list. Similar to a[len(a):] = [x].",
+    "filter": null
+  },
+  {
+    "id": "q04",
+    "type": "condition",
+    "split": "dev",
+    "question": "Why can a mutable default argument retain values across later function calls?",
+    "expected_answer": "A default value is evaluated only once, at function definition time.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 31,
+    "evidence_quote": "The default value is evaluated only once. This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes.",
+    "filter": null
+  },
+  {
+    "id": "q05",
+    "type": "rule",
+    "split": "dev",
+    "question": "In a function call, where must keyword arguments appear relative to positional arguments?",
+    "expected_answer": "Keyword arguments must follow positional arguments.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 32,
+    "evidence_quote": "In a function call, keyword arguments must follow positional arguments.",
+    "filter": null
+  },
+  {
+    "id": "q06",
+    "type": "direct",
+    "split": "dev",
+    "question": "Can an existing tuple element be replaced by indexed assignment?",
+    "expected_answer": "No. Tuples are immutable.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 44,
+    "evidence_quote": "Tuples are immutable",
+    "filter": null
+  },
+  {
+    "id": "q07",
+    "type": "metadata_filter",
+    "split": "dev",
+    "question": "Within the data-structures chapter, what are two basic uses of a set?",
+    "expected_answer": "Membership testing and eliminating duplicate entries.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 44,
+    "evidence_quote": "Basic uses include membership testing and eliminating duplicate entries.",
+    "filter": {"category": "data_structures"}
+  },
+  {
+    "id": "q08",
+    "type": "condition",
+    "split": "dev",
+    "question": "Which kinds of Python objects may be used as dictionary keys?",
+    "expected_answer": "Dictionary keys may be any immutable type; strings and numbers are always valid, and tuples are valid only if their contents are immutable.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 45,
+    "evidence_quote": "dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys",
+    "filter": null
+  },
+  {
+    "id": "q09",
+    "type": "condition",
+    "split": "dev",
+    "question": "Why can a script in the script directory shadow a standard-library module?",
+    "expected_answer": "The script directory is placed at the beginning of the module search path, before the standard-library path.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 52,
+    "evidence_quote": "The directory containing the script being run is placed at the beginning of the search path, ahead of the standard library path.",
+    "filter": null
+  },
+  {
+    "id": "q10",
+    "type": "metadata_filter",
+    "split": "dev",
+    "question": "Within the modules chapter, where can a package define the names exported by a wildcard import?",
+    "expected_answer": "The package can define the __all__ variable in __init__.py.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 55,
+    "evidence_quote": "__init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__ variable",
+    "filter": {"category": "modules"}
+  },
+  {
+    "id": "q11",
+    "type": "direct",
+    "split": "dev",
+    "question": "Which JSON function serializes an object directly to an open text file?",
+    "expected_answer": "json.dump(x, f).",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 65,
+    "evidence_quote": "Another variant of the dumps() function, called dump(), simply serializes the object to a text file.",
+    "filter": null
+  },
+  {
+    "id": "q12",
+    "type": "paraphrase",
+    "split": "dev",
+    "question": "What resource-safety advantage does with provide when working with a file?",
+    "expected_answer": "It closes the file after the suite finishes, even if an exception occurs.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 63,
+    "evidence_quote": "The advantage is that the file is properly closed after its suite finishes, even if an exception is raised at some point.",
+    "filter": null
+  },
+  {
+    "id": "q13",
+    "type": "direct",
+    "split": "dev",
+    "question": "How can one except clause catch several exception types?",
+    "expected_answer": "Name the exception types in a parenthesized tuple.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 68,
+    "evidence_quote": "An except clause may name multiple exceptions as a parenthesized tuple",
+    "filter": null
+  },
+  {
+    "id": "q14",
+    "type": "reason",
+    "split": "dev",
+    "question": "Why is a try statement's else clause preferable to placing extra code inside try?",
+    "expected_answer": "It avoids catching exceptions raised by code that was not meant to be protected by the try block.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 70,
+    "evidence_quote": "The use of the else clause is better than adding additional code to the try clause because it avoids accidentally catching an exception that wasn’t raised by the code being protected by the try ... except statement.",
+    "filter": null
+  },
+  {
+    "id": "q15",
+    "type": "condition",
+    "split": "dev",
+    "question": "Does a finally clause run when the try statement produces no exception?",
+    "expected_answer": "Yes. It runs whether or not the try statement produces an exception.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 72,
+    "evidence_quote": "The finally clause runs whether or not the try statement produces an exception.",
+    "filter": null
+  },
+  {
+    "id": "q16",
+    "type": "contrast",
+    "split": "test",
+    "question": "What is the intended difference between class variables and instance variables?",
+    "expected_answer": "Instance variables hold data unique to each instance; class variables hold attributes and methods shared by all instances.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 84,
+    "evidence_quote": "instance variables are for data unique to each instance and class variables are for attributes and methods shared by all instances of the class",
+    "filter": null
+  },
+  {
+    "id": "q17",
+    "type": "sequence",
+    "split": "test",
+    "question": "How does a Python for loop know that an iterator is exhausted?",
+    "expected_answer": "The iterator's __next__() method raises StopIteration.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 89,
+    "evidence_quote": "When there are no more elements, __next__() raises a StopIteration exception which tells the for loop to terminate.",
+    "filter": null
+  },
+  {
+    "id": "q18",
+    "type": "metadata_filter",
+    "split": "test",
+    "question": "In the virtual-environments section, which command creates an environment named tutorial-env?",
+    "expected_answer": "python -m venv tutorial-env",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 107,
+    "evidence_quote": "python -m venv tutorial-env",
+    "filter": {"category": "virtual_environments"}
+  },
+  {
+    "id": "q19",
+    "type": "reason",
+    "split": "test",
+    "question": "Why can adding 0.1 three times fail an equality comparison with 0.3?",
+    "expected_answer": "The binary floating-point values for 0.1 and 0.3 are approximations rather than the exact decimal fractions.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 116,
+    "evidence_quote": "since 0.1 is not exactly 1/10, summing three values of 0.1 may not yield exactly 0.3",
+    "filter": null
+  },
+  {
+    "id": "q20",
+    "type": "direct",
+    "split": "test",
+    "question": "What does the doctest module validate inside a program's docstrings?",
+    "expected_answer": "It validates tests embedded in docstrings.",
+    "gold_source_id": "python-tutorial-3.13.7",
+    "gold_page": 97,
+    "evidence_quote": "The doctest module provides a tool for scanning a module and validating tests embedded in a program’s docstrings.",
+    "filter": null
+  }
+]
