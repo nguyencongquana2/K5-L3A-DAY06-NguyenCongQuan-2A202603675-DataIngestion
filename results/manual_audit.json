@@ -1,0 +1,1269 @@
+{
+  "audit_method": {
+    "reviewer": "AI-assisted explicit review; student confirmation required before submission",
+    "independence_limit": "The reviewer helped implement the pipeline, so labels are not independent and may be optimistic.",
+    "coherence_sampling": "The midpoint of the first 10 sorted counted page IDs was fixed; the chunk containing that position was inspected for each strategy.",
+    "metadata_sampling": "All 5 test questions x top-3 hits x 3 strategies (45 records).",
+    "grounding_sampling": "All 5 test questions for each strategy; labels judge evidence sufficiency, not LLM answer correctness."
+  },
+  "coherence_labels": [
+    {
+      "strategy": "A",
+      "source_position": {
+        "page": 9,
+        "normalized_character": 1881
+      },
+      "chunk_id": "python-tutorial-3.13.7:p009:fixed:002",
+      "chunk_text": "but it is a real programming language, offering much more structure and support for large\nprograms than shell scripts or batch files can offer. On the other hand, Python also offers much more error checking\nthan C, and, being a very-high-level language, it has high-level data types built in, such as flexible arrays and dictionaries. Because of its more general data types Python is applicable to a much larger problem domain than Awk or\neven Perl, yet many things are at least as easy in Python as in those languages.\n\nPython allows you to split your program into modules that can be reused in other Python programs. It comes with a\nlarge collection of standard modules that you can use as the basis of your programs — or as examples to start learning\nto program in Python. Some of these modules",
+      "score_0_to_2": 1,
+      "reason": "Starts mid-sentence; the module paragraph is understandable but its preceding subject is missing."
+    },
+    {
+      "strategy": "B",
+      "source_position": {
+        "page": 9,
+        "normalized_character": 1881
+      },
+      "chunk_id": "python-tutorial-3.13.7:p009:paragraph:002",
+      "chunk_text": "Python allows you to split your program into modules that can be reused in other Python programs. It comes with a\nlarge collection of standard modules that you can use as the basis of your programs — or as examples to start learning\nto program in Python. Some of these modules provide things like file I/O, system calls, sockets, and even interfaces\nto graphical user interface toolkits like Tk.\n\nPython is an interpreted language, which can save you considerable time during program development because no\ncompilation and linking is necessary. The interpreter can be used interactively, which makes it easy to experiment with\nfeatures of the language, to write throw-away programs, or to test functions during bottom-up program development.\nIt is also a handy desk calculator.\n\nPython enables programs to be written compactly and readably. Programs written in Python are typically much\nshorter than equivalent C, C++, or Java programs, for several reasons:",
+      "score_0_to_2": 1,
+      "reason": "Contains complete prose paragraphs but ends with a colon before the promised reason list."
+    },
+    {
+      "strategy": "C",
+      "source_position": {
+        "page": 9,
+        "normalized_character": 1881
+      },
+      "chunk_id": "python-tutorial-3.13.7:p009:paragraph:002",
+      "chunk_text": "Python allows you to split your program into modules that can be reused in other Python programs. It comes with a\nlarge collection of standard modules that you can use as the basis of your programs — or as examples to start learning\nto program in Python. Some of these modules provide things like file I/O, system calls, sockets, and even interfaces\nto graphical user interface toolkits like Tk.\n\nPython is an interpreted language, which can save you considerable time during program development because no\ncompilation and linking is necessary. The interpreter can be used interactively, which makes it easy to experiment with\nfeatures of the language, to write throw-away programs, or to test functions during bottom-up program development.\nIt is also a handy desk calculator.\n\nPython enables programs to be written compactly and readably. Programs written in Python are typically much\nshorter than equivalent C, C++, or Java programs, for several reasons:",
+      "score_0_to_2": 1,
+      "reason": "Contains complete prose paragraphs but ends with a colon before the promised reason list."
+    },
+    {
+      "strategy": "A",
+      "source_position": {
+        "page": 10,
+        "normalized_character": 334
+      },
+      "chunk_id": "python-tutorial-3.13.7:p010:fixed:000",
+      "chunk_text": "Now that you are all excited about Python, you’ll want to examine it in some more detail. Since the best way to learn\na language is to use it, the tutorial invites you to play with the Python interpreter as you read.\n\nIn the next chapter, the mechanics of using the interpreter are explained. This is rather mundane information, but\nessential for trying out the examples shown later.\n\nThe rest of the tutorial introduces various features of the Python language and system through examples, beginning with simple expressions, statements and data types, through functions and modules, and finally touching upon\nadvanced concepts like exceptions and user-defined classes.",
+      "score_0_to_2": 2,
+      "reason": "All three paragraphs are complete and explain the tutorial progression independently."
+    },
+    {
+      "strategy": "B",
+      "source_position": {
+        "page": 10,
+        "normalized_character": 334
+      },
+      "chunk_id": "python-tutorial-3.13.7:p010:paragraph:000",
+      "chunk_text": "Now that you are all excited about Python, you’ll want to examine it in some more detail. Since the best way to learn\na language is to use it, the tutorial invites you to play with the Python interpreter as you read.\n\nIn the next chapter, the mechanics of using the interpreter are explained. This is rather mundane information, but\nessential for trying out the examples shown later.\n\nThe rest of the tutorial introduces various features of the Python language and system through examples, beginning with simple expressions, statements and data types, through functions and modules, and finally touching upon\nadvanced concepts like exceptions and user-defined classes.",
+      "score_0_to_2": 2,
+      "reason": "Complete, self-contained paragraphs describe what follows in the tutorial."
+    },
+    {
+      "strategy": "C",
+      "source_position": {
+        "page": 10,
+        "normalized_character": 334
+      },
+      "chunk_id": "python-tutorial-3.13.7:p010:paragraph:000",
+      "chunk_text": "Now that you are all excited about Python, you’ll want to examine it in some more detail. Since the best way to learn\na language is to use it, the tutorial invites you to play with the Python interpreter as you read.\n\nIn the next chapter, the mechanics of using the interpreter are explained. This is rather mundane information, but\nessential for trying out the examples shown later.\n\nThe rest of the tutorial introduces various features of the Python language and system through examples, beginning with simple expressions, statements and data types, through functions and modules, and finally touching upon\nadvanced concepts like exceptions and user-defined classes.",
+      "score_0_to_2": 2,
+      "reason": "Complete, self-contained paragraphs describe what follows in the tutorial."
+    },
+    {
+      "strategy": "A",
+      "source_position": {
+        "page": 11,
+        "normalized_character": 1431
+      },
+      "chunk_id": "python-tutorial-3.13.7:p011:fixed:001",
+      "chunk_text": "ble. If you have the py.exe launcher installed, you can use the py command. See setting-envvars for other\nways to launch Python.\n\nTyping an end-of-file character (Control-D on Unix, Control-Z on Windows) at the primary prompt causes the\ninterpreter to exit with a zero exit status. If that doesn’t work, you can exit the interpreter by typing the following\ncommand: quit().\n\nThe interpreter’s line-editing features include interactive editing, history substitution and code completion on systems\nthat support the GNU Readline library. Perhaps the quickest check to see whether command line editing is supported\nis typing Control-P to the first Python prompt you get. If it beeps, you have command line editing; see Appendix\nInteractive Input Editing and History Substitution for an introduction to",
+      "score_0_to_2": 1,
+      "reason": "Starts mid-word and ends mid-sentence, although the central line-editing explanation is usable."
+    },
+    {
+      "strategy": "B",
+      "source_position": {
+        "page": 11,
+        "normalized_character": 1431
+      },
+      "chunk_id": "python-tutorial-3.13.7:p011:paragraph:001",
+      "chunk_text": "Typing an end-of-file character (Control-D on Unix, Control-Z on Windows) at the primary prompt causes the\ninterpreter to exit with a zero exit status. If that doesn’t work, you can exit the interpreter by typing the following\ncommand: quit().\n\nThe interpreter’s line-editing features include interactive editing, history substitution and code completion on systems\nthat support the GNU Readline library. Perhaps the quickest check to see whether command line editing is supported\nis typing Control-P to the first Python prompt you get. If it beeps, you have command line editing; see Appendix\nInteractive Input Editing and History Substitution for an introduction to the keys. If nothing appears to happen, or if\n^P is echoed, command line editing isn’t available; you’ll only be able to use backspace to remove characters from\nthe current line.",
+      "score_0_to_2": 2,
+      "reason": "Two complete paragraphs explain interpreter exit and line editing."
+    },
+    {
+      "strategy": "C",
+      "source_position": {
+        "page": 11,
+        "normalized_character": 1431
+      },
+      "chunk_id": "python-tutorial-3.13.7:p011:paragraph:001",
+      "chunk_text": "Typing an end-of-file character (Control-D on Unix, Control-Z on Windows) at the primary prompt causes the\ninterpreter to exit with a zero exit status. If that doesn’t work, you can exit the interpreter by typing the following\ncommand: quit().\n\nThe interpreter’s line-editing features include interactive editing, history substitution and code completion on systems\nthat support the GNU Readline library. Perhaps the quickest check to see whether command line editing is supported\nis typing Control-P to the first Python prompt you get. If it beeps, you have command line editing; see Appendix\nInteractive Input Editing and History Substitution for an introduction to the keys. If nothing appears to happen, or if\n^P is echoed, command line editing isn’t available; you’ll only be able to use backspace to remove characters from\nthe current line.",
+      "score_0_to_2": 2,
+      "reason": "Two complete paragraphs explain interpreter exit and line editing."
+    },
+    {
+      "strategy": "A",
+      "source_position": {
+        "page": 12,
+        "normalized_character": 1414
+      },
+      "chunk_id": "python-tutorial-3.13.7:p012:fixed:001",
+      "chunk_text": "ion processing but\nleft in sys.argv for the command or module to handle.\n\n2.1.2 Interactive Mode\n\nWhen commands are read from a tty, the interpreter is said to be in interactive mode. In this mode it prompts for\nthe next command with the primary prompt, usually three greater-than signs (>>>); for continuation lines it prompts\nwith the secondary prompt, by default three dots (...). The interpreter prints a welcome message stating its version\nnumber and a copyright notice before printing the first prompt:\n\n$ python3.13\nPython 3.13 (default, April 4 2023, 09:25:04)\n[GCC 10.2.0] on linux\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>>\n\nContinuation lines are needed when entering a multi-line construct. As an example, take a look at this if statement:\n\n>>>",
+      "score_0_to_2": 1,
+      "reason": "Starts in a prior sentence and ends at an unfinished prompt, so both boundaries lose context."
+    },
+    {
+      "strategy": "B",
+      "source_position": {
+        "page": 12,
+        "normalized_character": 1414
+      },
+      "chunk_id": "python-tutorial-3.13.7:p012:paragraph:001",
+      "chunk_text": "When commands are read from a tty, the interpreter is said to be in interactive mode. In this mode it prompts for\nthe next command with the primary prompt, usually three greater-than signs (>>>); for continuation lines it prompts\nwith the secondary prompt, by default three dots (...). The interpreter prints a welcome message stating its version\nnumber and a copyright notice before printing the first prompt:\n\n$ python3.13\nPython 3.13 (default, April 4 2023, 09:25:04)\n[GCC 10.2.0] on linux\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>>\n\nContinuation lines are needed when entering a multi-line construct. As an example, take a look at this if statement:\n\n>>> the_world_is_flat = True\n>>> if the_world_is_flat:\n...\nprint(\"Be careful not to fall off!\")\n...\nBe careful not to fall off!\n\nFor more on interactive mode, see Interactive Mode.\n\n2.2 The Interpreter and Its Environment\n\n2.2.1 Source Code Encoding",
+      "score_0_to_2": 2,
+      "reason": "The interactive-mode explanation and example are complete; the trailing heading is traceable."
+    },
+    {
+      "strategy": "C",
+      "source_position": {
+        "page": 12,
+        "normalized_character": 1414
+      },
+      "chunk_id": "python-tutorial-3.13.7:p012:paragraph:001",
+      "chunk_text": "When commands are read from a tty, the interpreter is said to be in interactive mode. In this mode it prompts for\nthe next command with the primary prompt, usually three greater-than signs (>>>); for continuation lines it prompts\nwith the secondary prompt, by default three dots (...). The interpreter prints a welcome message stating its version\nnumber and a copyright notice before printing the first prompt:\n\n$ python3.13\nPython 3.13 (default, April 4 2023, 09:25:04)\n[GCC 10.2.0] on linux\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n>>>\n\nContinuation lines are needed when entering a multi-line construct. As an example, take a look at this if statement:\n\n>>> the_world_is_flat = True\n>>> if the_world_is_flat:\n...\nprint(\"Be careful not to fall off!\")\n...\nBe careful not to fall off!\n\nFor more on interactive mode, see Interactive Mode.\n\n2.2 The Interpreter and Its Environment\n\n2.2.1 Source Code Encoding",
+      "score_0_to_2": 2,
+      "reason": "The interactive-mode explanation and example are complete; the trailing heading is traceable."
+    },
+    {
+      "strategy": "A",
+      "source_position": {
+        "page": 13,
+        "normalized_character": 1008
+      },
+      "chunk_id": "python-tutorial-3.13.7:p013:fixed:001",
+      "chunk_text": "appear at the\nstart of a line or following whitespace or code, but not within a string literal. A hash character within a string literal\nis just a hash character. Since comments are to clarify code and are not interpreted by Python, they may be omitted\nwhen typing in examples.\n\nSome examples:\n\n# this is the first comment\nspam = 1\n# and this is the second comment\n# ... and now a third!\ntext = \"# This is not a comment because it's inside quotes.\"\n\n3.1 Using Python as a Calculator\n\nLet’s try some simple Python commands. Start the interpreter and wait for the primary prompt, >>>. (It shouldn’t\ntake long.)\n\n3.1.1 Numbers\n\nThe interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression\nsyntax is straightforward: the operators +, -, * and /",
+      "score_0_to_2": 1,
+      "reason": "Starts with a continuation from the comments explanation before reaching a coherent calculator section."
+    },
+    {
+      "strategy": "B",
+      "source_position": {
+        "page": 13,
+        "normalized_character": 1008
+      },
+      "chunk_id": "python-tutorial-3.13.7:p013:paragraph:001",
+      "chunk_text": "# this is the first comment\nspam = 1\n# and this is the second comment\n# ... and now a third!\ntext = \"# This is not a comment because it's inside quotes.\"\n\n3.1 Using Python as a Calculator\n\nLet’s try some simple Python commands. Start the interpreter and wait for the primary prompt, >>>. (It shouldn’t\ntake long.)\n\n3.1.1 Numbers\n\nThe interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression\nsyntax is straightforward: the operators +, -, * and / can be used to perform arithmetic; parentheses (()) can be\nused for grouping. For example:\n\n>>> 2 + 2\n4\n>>> 50 - 5*6\n20\n>>> (50 - 5*6) / 4\n5.0\n>>> 8 / 5\n# division always returns a floating-point number\n1.6\n\nThe integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float.\nWe will see more about numeric types later in the tutorial.",
+      "score_0_to_2": 2,
+      "reason": "The calculator subsection includes its setup, examples and numeric-type explanation."
+    },
+    {
+      "strategy": "C",
+      "source_position": {
+        "page": 13,
+        "normalized_character": 1008
+      },
+      "chunk_id": "python-tutorial-3.13.7:p013:paragraph:001",
+      "chunk_text": "# this is the first comment\nspam = 1\n# and this is the second comment\n# ... and now a third!\ntext = \"# This is not a comment because it's inside quotes.\"\n\n3.1 Using Python as a Calculator\n\nLet’s try some simple Python commands. Start the interpreter and wait for the primary prompt, >>>. (It shouldn’t\ntake long.)\n\n3.1.1 Numbers\n\nThe interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression\nsyntax is straightforward: the operators +, -, * and / can be used to perform arithmetic; parentheses (()) can be\nused for grouping. For example:\n\n>>> 2 + 2\n4\n>>> 50 - 5*6\n20\n>>> (50 - 5*6) / 4\n5.0\n>>> 8 / 5\n# division always returns a floating-point number\n1.6\n\nThe integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float.\nWe will see more about numeric types later in the tutorial.",
+      "score_0_to_2": 2,
+      "reason": "The calculator subsection includes its setup, examples and numeric-type explanation."
+    },
+    {
+      "strategy": "A",
+      "source_position": {
+        "page": 14,
+        "normalized_character": 942
+      },
+      "chunk_id": "python-tutorial-3.13.7:p014:fixed:001",
+      "chunk_text": "ou an error:\n\n>>> n\n# try to access an undefined variable\nTraceback (most recent call last):\n\nFile \"<stdin>\", line 1, in <module>\nNameError: name 'n' is not defined\n\nThere is full support for floating point; operators with mixed type operands convert the integer operand to floating\npoint:\n\n>>> 4 * 3.75 - 1\n14.0\n\nIn interactive mode, the last printed expression is assigned to the variable _. This means that when you are using\nPython as a desk calculator, it is somewhat easier to continue calculations, for example:\n\n>>> tax = 12.5 / 100\n>>> price = 100.50\n>>> price * tax\n12.5625\n>>> price + _\n113.0625\n>>> round(_, 2)\n113.06\n\nThis variable should be treated as read-only by the user. Don’t explicitly assign a value to it — you would create an\nindependent local variable with the same name",
+      "score_0_to_2": 1,
+      "reason": "Starts mid-word in an error explanation; the later calculator example is understandable."
+    },
+    {
+      "strategy": "B",
+      "source_position": {
+        "page": 14,
+        "normalized_character": 942
+      },
+      "chunk_id": "python-tutorial-3.13.7:p014:paragraph:000",
+      "chunk_text": ">>> 17 / 3\n# classic division returns a float\n5.666666666666667\n>>>\n>>> 17 // 3\n# floor division discards the fractional part\n5\n>>> 17 % 3\n# the % operator returns the remainder of the division\n2\n>>> 5 * 3 + 2\n# floored quotient * divisor + remainder\n17\n\nWith Python, it is possible to use the ** operator to calculate powers1:\n\n>>> 5 ** 2\n# 5 squared\n25\n>>> 2 ** 7\n# 2 to the power of 7\n128\n\nThe equal sign (=) is used to assign a value to a variable. Afterwards, no result is displayed before the next interactive\nprompt:\n\n>>> width = 20\n>>> height = 5 * 9\n>>> width * height\n900\n\nIf a variable is not “defined” (assigned a value), trying to use it will give you an error:\n\n>>> n\n# try to access an undefined variable\nTraceback (most recent call last):\n\nFile \"<stdin>\", line 1, in <module>\nNameError: name 'n' is not defined\n\nThere is full support for floating point; operators with mixed type operands convert the integer operand to floating\npoint:\n\n>>> 4 * 3.75 - 1\n14.0",
+      "score_0_to_2": 2,
+      "reason": "The arithmetic and undefined-variable examples retain their explanations and outputs."
+    },
+    {
+      "strategy": "C",
+      "source_position": {
+        "page": 14,
+        "normalized_character": 942
+      },
+      "chunk_id": "python-tutorial-3.13.7:p014:paragraph:000",
+      "chunk_text": ">>> 17 / 3\n# classic division returns a float\n5.666666666666667\n>>>\n>>> 17 // 3\n# floor division discards the fractional part\n5\n>>> 17 % 3\n# the % operator returns the remainder of the division\n2\n>>> 5 * 3 + 2\n# floored quotient * divisor + remainder\n17\n\nWith Python, it is possible to use the ** operator to calculate powers1:\n\n>>> 5 ** 2\n# 5 squared\n25\n>>> 2 ** 7\n# 2 to the power of 7\n128\n\nThe equal sign (=) is used to assign a value to a variable. Afterwards, no result is displayed before the next interactive\nprompt:\n\n>>> width = 20\n>>> height = 5 * 9\n>>> width * height\n900\n\nIf a variable is not “defined” (assigned a value), trying to use it will give you an error:\n\n>>> n\n# try to access an undefined variable\nTraceback (most recent call last):\n\nFile \"<stdin>\", line 1, in <module>\nNameError: name 'n' is not defined\n\nThere is full support for floating point; operators with mixed type operands convert the integer operand to floating\npoint:\n\n>>> 4 * 3.75 - 1\n14.0",
+      "score_0_to_2": 2,
+      "reason": "The arithmetic and undefined-variable examples retain their explanations and outputs."
+    },
+    {
+      "strategy": "A",
+      "source_position": {
+        "page": 15,
+        "normalized_character": 1274
+      },
+      "chunk_id": "python-tutorial-3.13.7:p015:fixed:001",
+      "chunk_text": "se \\' to escape the single quote...\n\"doesn't\"\n>>> \"doesn't\"\n# ...or use double quotes instead\n\"doesn't\"\n>>> '\"Yes,\" they said.'\n'\"Yes,\" they said.'\n>>> \"\\\"Yes,\\\" they said.\"\n'\"Yes,\" they said.'\n>>> '\"Isn\\'t,\" they said.'\n'\"Isn\\'t,\" they said.'\n\nIn the Python shell, the string definition and output string can look different. The print() function produces a more\nreadable output, by omitting the enclosing quotes and by printing escaped and special characters:\n\n>>> s = 'First line.\\nSecond line.'\n# \\n means newline\n>>> s\n# without print(), special characters are included in the string\n'First line.\\nSecond line.'\n>>> print(s)\n# with print(), special characters are interpreted, so \\n produces␣\n\n,→new line\nFirst line.\nSecond line.\n\nIf you don’t want characters prefaced by \\ to be interpreted as",
+      "score_0_to_2": 1,
+      "reason": "Starts inside a quoting example, so the initial subject and setup are missing."
+    },
+    {
+      "strategy": "B",
+      "source_position": {
+        "page": 15,
+        "normalized_character": 1274
+      },
+      "chunk_id": "python-tutorial-3.13.7:p015:paragraph:001",
+      "chunk_text": "In the Python shell, the string definition and output string can look different. The print() function produces a more\nreadable output, by omitting the enclosing quotes and by printing escaped and special characters:\n\n>>> s = 'First line.\\nSecond line.'\n# \\n means newline\n>>> s\n# without print(), special characters are included in the string\n'First line.\\nSecond line.'\n>>> print(s)\n# with print(), special characters are interpreted, so \\n produces␣\n\n,→new line\nFirst line.\nSecond line.\n\nIf you don’t want characters prefaced by \\ to be interpreted as special characters, you can use raw strings by adding\nan r before the first quote:\n\n>>> print('C:\\some\\name')\n# here \\n means newline!\nC:\\some\name\n>>> print(r'C:\\some\\name')\n# note the r before the quote\nC:\\some\\name\n\nThere is one subtle aspect to raw strings: a raw string may not end in an odd number of \\ characters; see the FAQ\nentry for more information and workarounds.",
+      "score_0_to_2": 2,
+      "reason": "The print and raw-string discussion includes setup, examples and limitations."
+    },
+    {
+      "strategy": "C",
+      "source_position": {
+        "page": 15,
+        "normalized_character": 1274
+      },
+      "chunk_id": "python-tutorial-3.13.7:p015:paragraph:001",
+      "chunk_text": "In the Python shell, the string definition and output string can look different. The print() function produces a more\nreadable output, by omitting the enclosing quotes and by printing escaped and special characters:\n\n>>> s = 'First line.\\nSecond line.'\n# \\n means newline\n>>> s\n# without print(), special characters are included in the string\n'First line.\\nSecond line.'\n>>> print(s)\n# with print(), special characters are interpreted, so \\n produces␣\n\n,→new line\nFirst line.\nSecond line.\n\nIf you don’t want characters prefaced by \\ to be interpreted as special characters, you can use raw strings by adding\nan r before the first quote:\n\n>>> print('C:\\some\\name')\n# here \\n means newline!\nC:\\some\name\n>>> print(r'C:\\some\\name')\n# note the r before the quote\nC:\\some\\name\n\nThere is one subtle aspect to raw strings: a raw string may not end in an odd number of \\ characters; see the FAQ\nentry for more information and workarounds.",
+      "score_0_to_2": 2,
+      "reason": "The print and raw-string discussion includes setup, examples and limitations."
+    },
+    {
+      "strategy": "A",
+      "source_position": {
+        "page": 16,
+        "normalized_character": 784
+      },
+      "chunk_id": "python-tutorial-3.13.7:p016:fixed:000",
+      "chunk_text": "(continued from previous page)\n\n...\n-H hostname\nHostname to connect to\n... \"\"\")\nUsage: thingy [OPTIONS]\n\n-h\nDisplay this usage message\n-H hostname\nHostname to connect to\n\n>>>\n\nStrings can be concatenated (glued together) with the + operator, and repeated with *:\n\n>>> # 3 times 'un', followed by 'ium'\n>>> 3 * 'un' + 'ium'\n'unununium'\n\nTwo or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.\n\n>>> 'Py' 'thon'\n'Python'\n\nThis feature is particularly useful when you want to break long strings:\n\n>>> text = ('Put several strings within parentheses '\n...\n'to have them joined together.')\n>>> text\n'Put several strings within parentheses to have them joined together.'\n\nThis only works with two literals though, not with variables or",
+      "score_0_to_2": 1,
+      "reason": "Begins with a continuation from the previous page and cuts the final example."
+    },
+    {
+      "strategy": "B",
+      "source_position": {
+        "page": 16,
+        "normalized_character": 784
+      },
+      "chunk_id": "python-tutorial-3.13.7:p016:paragraph:000",
+      "chunk_text": "(continued from previous page)\n\n...\n-H hostname\nHostname to connect to\n... \"\"\")\nUsage: thingy [OPTIONS]\n\n-h\nDisplay this usage message\n-H hostname\nHostname to connect to\n\n>>>\n\nStrings can be concatenated (glued together) with the + operator, and repeated with *:\n\n>>> # 3 times 'un', followed by 'ium'\n>>> 3 * 'un' + 'ium'\n'unununium'\n\nTwo or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.\n\n>>> 'Py' 'thon'\n'Python'\n\nThis feature is particularly useful when you want to break long strings:\n\n>>> text = ('Put several strings within parentheses '\n...\n'to have them joined together.')\n>>> text\n'Put several strings within parentheses to have them joined together.'\n\nThis only works with two literals though, not with variables or expressions:\n\n>>> prefix = 'Py'\n>>> prefix 'thon'\n# can't concatenate a variable and a string literal\nFile \"<stdin>\", line 1\n\nprefix 'thon'\n\n^^^^^^\nSyntaxError: invalid syntax\n>>> ('un' * 3) 'ium'",
+      "score_0_to_2": 1,
+      "reason": "The physical page begins as a continuation and the selected group ends inside an error example."
+    },
+    {
+      "strategy": "C",
+      "source_position": {
+        "page": 16,
+        "normalized_character": 784
+      },
+      "chunk_id": "python-tutorial-3.13.7:p016:paragraph:000",
+      "chunk_text": "(continued from previous page)\n\n...\n-H hostname\nHostname to connect to\n... \"\"\")\nUsage: thingy [OPTIONS]\n\n-h\nDisplay this usage message\n-H hostname\nHostname to connect to\n\n>>>\n\nStrings can be concatenated (glued together) with the + operator, and repeated with *:\n\n>>> # 3 times 'un', followed by 'ium'\n>>> 3 * 'un' + 'ium'\n'unununium'\n\nTwo or more string literals (i.e. the ones enclosed between quotes) next to each other are automatically concatenated.\n\n>>> 'Py' 'thon'\n'Python'\n\nThis feature is particularly useful when you want to break long strings:\n\n>>> text = ('Put several strings within parentheses '\n...\n'to have them joined together.')\n>>> text\n'Put several strings within parentheses to have them joined together.'\n\nThis only works with two literals though, not with variables or expressions:\n\n>>> prefix = 'Py'\n>>> prefix 'thon'\n# can't concatenate a variable and a string literal\nFile \"<stdin>\", line 1\n\nprefix 'thon'\n\n^^^^^^\nSyntaxError: invalid syntax\n>>> ('un' * 3) 'ium'",
+      "score_0_to_2": 1,
+      "reason": "The physical page begins as a continuation and the selected group ends inside an error example."
+    },
+    {
+      "strategy": "A",
+      "source_position": {
+        "page": 17,
+        "normalized_character": 1060
+      },
+      "chunk_id": "python-tutorial-3.13.7:p017:fixed:001",
+      "chunk_text": "(excluded)\n'Py'\n>>> word[4:]\n# characters from position 4 (included) to the end\n'on'\n>>> word[-2:]\n# characters from the second-last (included) to the end\n'on'\n\nNote how the start is always included, and the end always excluded. This makes sure that s[:i] + s[i:] is always\nequal to s:\n\n>>> word[:2] + word[2:]\n'Python'\n>>> word[:4] + word[4:]\n'Python'\n\nOne way to remember how slices work is to think of the indices as pointing between characters, with the left edge of\nthe first character numbered 0. Then the right edge of the last character of a string of n characters has index n, for\nexample:\n\n+---+---+---+---+---+---+\n| P | y | t | h | o | n |\n+---+---+---+---+---+---+\n0\n1\n2\n3\n4\n5\n6\n-6\n-5\n-4\n-3\n-2\n-1\n\nThe first row of numbers gives the position of the indices 0...6 in the string; the",
+      "score_0_to_2": 1,
+      "reason": "Begins with the tail of a previous sentence before a coherent slice explanation."
+    },
+    {
+      "strategy": "B",
+      "source_position": {
+        "page": 17,
+        "normalized_character": 1060
+      },
+      "chunk_id": "python-tutorial-3.13.7:p017:paragraph:001",
+      "chunk_text": ">>> word[:2] + word[2:]\n'Python'\n>>> word[:4] + word[4:]\n'Python'\n\nOne way to remember how slices work is to think of the indices as pointing between characters, with the left edge of\nthe first character numbered 0. Then the right edge of the last character of a string of n characters has index n, for\nexample:\n\n+---+---+---+---+---+---+\n| P | y | t | h | o | n |\n+---+---+---+---+---+---+\n0\n1\n2\n3\n4\n5\n6\n-6\n-5\n-4\n-3\n-2\n-1\n\nThe first row of numbers gives the position of the indices 0...6 in the string; the second row gives the corresponding\nnegative indices. The slice from i to j consists of all characters between the edges labeled i and j, respectively.\n\nFor non-negative indices, the length of a slice is the difference of the indices, if both are within bounds. For example,\nthe length of word[1:3] is 2.\n\nAttempting to use an index that is too large will result in an error:\n\n>>> word[42]\n# the word only has 6 characters\nTraceback (most recent call last):",
+      "score_0_to_2": 2,
+      "reason": "The slicing rule, diagram and bounds explanation form a self-contained unit."
+    },
+    {
+      "strategy": "C",
+      "source_position": {
+        "page": 17,
+        "normalized_character": 1060
+      },
+      "chunk_id": "python-tutorial-3.13.7:p017:paragraph:001",
+      "chunk_text": ">>> word[:2] + word[2:]\n'Python'\n>>> word[:4] + word[4:]\n'Python'\n\nOne way to remember how slices work is to think of the indices as pointing between characters, with the left edge of\nthe first character numbered 0. Then the right edge of the last character of a string of n characters has index n, for\nexample:\n\n+---+---+---+---+---+---+\n| P | y | t | h | o | n |\n+---+---+---+---+---+---+\n0\n1\n2\n3\n4\n5\n6\n-6\n-5\n-4\n-3\n-2\n-1\n\nThe first row of numbers gives the position of the indices 0...6 in the string; the second row gives the corresponding\nnegative indices. The slice from i to j consists of all characters between the edges labeled i and j, respectively.\n\nFor non-negative indices, the length of a slice is the difference of the indices, if both are within bounds. For example,\nthe length of word[1:3] is 2.\n\nAttempting to use an index that is too large will result in an error:\n\n>>> word[42]\n# the word only has 6 characters\nTraceback (most recent call last):",
+      "score_0_to_2": 2,
+      "reason": "The slicing rule, diagram and bounds explanation form a self-contained unit."
+    },
+    {
+      "strategy": "A",
+      "source_position": {
+        "page": 18,
+        "normalized_character": 835
+      },
+      "chunk_id": "python-tutorial-3.13.7:p018:fixed:001",
+      "chunk_text": "listicexpialidocious'\n>>> len(s)\n34\n\nμ See also\n\ntextseq\n\nStrings are examples of sequence types, and support the common operations supported by such types.\n\nstring-methods\n\nStrings support a large number of methods for basic transformations and searching.\n\nf-strings\n\nString literals that have embedded expressions.\n\nformatstrings\n\nInformation about string formatting with str.format().\n\nold-string-formatting\n\nThe old formatting operations invoked when strings are the left operand of the % operator are described in\nmore detail here.\n\n3.1.3 Lists\n\nPython knows a number of compound data types, used to group together other values. The most versatile is the list,\nwhich can be written as a list of comma-separated values (items) between square brackets. Lists might contain items\nof different",
+      "score_0_to_2": 1,
+      "reason": "Begins with the tail of a previous example before changing to list material."
+    },
+    {
+      "strategy": "B",
+      "source_position": {
+        "page": 18,
+        "normalized_character": 835
+      },
+      "chunk_id": "python-tutorial-3.13.7:p018:paragraph:000",
+      "chunk_text": ">>> word[4:42]\n'on'\n>>> word[42:]\n''\n\nPython strings cannot be changed — they are immutable. Therefore, assigning to an indexed position in the string\nresults in an error:\n\n>>> word[0] = 'J'\nTraceback (most recent call last):\n\nFile \"<stdin>\", line 1, in <module>\nTypeError: 'str' object does not support item assignment\n>>> word[2:] = 'py'\nTraceback (most recent call last):\n\nFile \"<stdin>\", line 1, in <module>\nTypeError: 'str' object does not support item assignment\n\nIf you need a different string, you should create a new one:\n\n>>> 'J' + word[1:]\n'Jython'\n>>> word[:2] + 'py'\n'Pypy'\n\nThe built-in function len() returns the length of a string:\n\n>>> s = 'supercalifragilisticexpialidocious'\n>>> len(s)\n34\n\nμ See also\n\ntextseq\n\nStrings are examples of sequence types, and support the common operations supported by such types.\n\nstring-methods\n\nStrings support a large number of methods for basic transformations and searching.\n\nf-strings\n\nString literals that have embedded expressions.",
+      "score_0_to_2": 2,
+      "reason": "String immutability is explained with the failing assignment and replacement approach."
+    },
+    {
+      "strategy": "C",
+      "source_position": {
+        "page": 18,
+        "normalized_character": 835
+      },
+      "chunk_id": "python-tutorial-3.13.7:p018:paragraph:000",
+      "chunk_text": ">>> word[4:42]\n'on'\n>>> word[42:]\n''\n\nPython strings cannot be changed — they are immutable. Therefore, assigning to an indexed position in the string\nresults in an error:\n\n>>> word[0] = 'J'\nTraceback (most recent call last):\n\nFile \"<stdin>\", line 1, in <module>\nTypeError: 'str' object does not support item assignment\n>>> word[2:] = 'py'\nTraceback (most recent call last):\n\nFile \"<stdin>\", line 1, in <module>\nTypeError: 'str' object does not support item assignment\n\nIf you need a different string, you should create a new one:\n\n>>> 'J' + word[1:]\n'Jython'\n>>> word[:2] + 'py'\n'Pypy'\n\nThe built-in function len() returns the length of a string:\n\n>>> s = 'supercalifragilisticexpialidocious'\n>>> len(s)\n34\n\nμ See also\n\ntextseq\n\nStrings are examples of sequence types, and support the common operations supported by such types.\n\nstring-methods\n\nStrings support a large number of methods for basic transformations and searching.\n\nf-strings\n\nString literals that have embedded expressions.",
+      "score_0_to_2": 2,
+      "reason": "String immutability is explained with the failing assignment and replacement approach."
+    }
+  ],
+  "metadata_audit": [
+    {
+      "strategy": "A",
+      "question_id": "q16",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p084:fixed:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 84,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q16",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p082:fixed:001",
+      "source": "data/source/tutorial.pdf",
+      "page": 82,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q16",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p088:fixed:003",
+      "source": "data/source/tutorial.pdf",
+      "page": 88,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q17",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p089:fixed:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 89,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q17",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p020:fixed:002",
+      "source": "data/source/tutorial.pdf",
+      "page": 20,
+      "category": "basics",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q17",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p089:fixed:001",
+      "source": "data/source/tutorial.pdf",
+      "page": 89,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q18",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p107:fixed:002",
+      "source": "data/source/tutorial.pdf",
+      "page": 107,
+      "category": "virtual_environments",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q18",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p107:fixed:003",
+      "source": "data/source/tutorial.pdf",
+      "page": 107,
+      "category": "virtual_environments",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q18",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p052:fixed:005",
+      "source": "data/source/tutorial.pdf",
+      "page": 52,
+      "category": "modules",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q19",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p116:fixed:002",
+      "source": "data/source/tutorial.pdf",
+      "page": 116,
+      "category": "floating_point",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q19",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p116:fixed:003",
+      "source": "data/source/tutorial.pdf",
+      "page": 116,
+      "category": "floating_point",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q19",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p118:fixed:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 118,
+      "category": "floating_point",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q20",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p037:fixed:003",
+      "source": "data/source/tutorial.pdf",
+      "page": 37,
+      "category": "control_flow",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q20",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p097:fixed:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 97,
+      "category": "standard_library",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "A",
+      "question_id": "q20",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p037:fixed:002",
+      "source": "data/source/tutorial.pdf",
+      "page": 37,
+      "category": "control_flow",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q16",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p084:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 84,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q16",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p079:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 79,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q16",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p083:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 83,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q17",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p089:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 89,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q17",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p089:paragraph:001",
+      "source": "data/source/tutorial.pdf",
+      "page": 89,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q17",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p023:paragraph:001",
+      "source": "data/source/tutorial.pdf",
+      "page": 23,
+      "category": "control_flow",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q18",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p107:paragraph:002",
+      "source": "data/source/tutorial.pdf",
+      "page": 107,
+      "category": "virtual_environments",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q18",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p052:paragraph:004",
+      "source": "data/source/tutorial.pdf",
+      "page": 52,
+      "category": "modules",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q18",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p107:paragraph:001",
+      "source": "data/source/tutorial.pdf",
+      "page": 107,
+      "category": "virtual_environments",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q19",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p104:paragraph:002",
+      "source": "data/source/tutorial.pdf",
+      "page": 104,
+      "category": "standard_library_advanced",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q19",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p116:paragraph:001",
+      "source": "data/source/tutorial.pdf",
+      "page": 116,
+      "category": "floating_point",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q19",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p116:paragraph:003",
+      "source": "data/source/tutorial.pdf",
+      "page": 116,
+      "category": "floating_point",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q20",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p097:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 97,
+      "category": "standard_library",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q20",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p037:paragraph:003",
+      "source": "data/source/tutorial.pdf",
+      "page": 37,
+      "category": "control_flow",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "B",
+      "question_id": "q20",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p052:paragraph:002",
+      "source": "data/source/tutorial.pdf",
+      "page": 52,
+      "category": "modules",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q16",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p084:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 84,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q16",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p079:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 79,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q16",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p083:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 83,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q17",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p089:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 89,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q17",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p089:paragraph:001",
+      "source": "data/source/tutorial.pdf",
+      "page": 89,
+      "category": "classes",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q17",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p023:paragraph:001",
+      "source": "data/source/tutorial.pdf",
+      "page": 23,
+      "category": "control_flow",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q18",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p107:paragraph:002",
+      "source": "data/source/tutorial.pdf",
+      "page": 107,
+      "category": "virtual_environments",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": true,
+      "filter_compliant": true,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q18",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p107:paragraph:001",
+      "source": "data/source/tutorial.pdf",
+      "page": 107,
+      "category": "virtual_environments",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": true,
+      "filter_compliant": true,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q18",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p108:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 108,
+      "category": "virtual_environments",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": true,
+      "filter_compliant": true,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q19",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p104:paragraph:002",
+      "source": "data/source/tutorial.pdf",
+      "page": 104,
+      "category": "standard_library_advanced",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q19",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p116:paragraph:001",
+      "source": "data/source/tutorial.pdf",
+      "page": 116,
+      "category": "floating_point",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q19",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p116:paragraph:003",
+      "source": "data/source/tutorial.pdf",
+      "page": 116,
+      "category": "floating_point",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q20",
+      "rank": 1,
+      "chunk_id": "python-tutorial-3.13.7:p097:paragraph:000",
+      "source": "data/source/tutorial.pdf",
+      "page": 97,
+      "category": "standard_library",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q20",
+      "rank": 2,
+      "chunk_id": "python-tutorial-3.13.7:p037:paragraph:003",
+      "source": "data/source/tutorial.pdf",
+      "page": 37,
+      "category": "control_flow",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    },
+    {
+      "strategy": "C",
+      "question_id": "q20",
+      "rank": 3,
+      "chunk_id": "python-tutorial-3.13.7:p052:paragraph:002",
+      "source": "data/source/tutorial.pdf",
+      "page": 52,
+      "category": "modules",
+      "document_id_correct": true,
+      "source_correct": true,
+      "page_and_text_correct": true,
+      "category_correct": true,
+      "filter_applied": false,
+      "filter_compliant": null,
+      "complete_and_correct": true
+    }
+  ],
+  "grounding_labels": [
+    {
+      "strategy": "A",
+      "question_id": "q16",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        1
+      ],
+      "reason": "Top-3 states the class-versus-instance variable distinction and retains page 84."
+    },
+    {
+      "strategy": "A",
+      "question_id": "q17",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        1
+      ],
+      "reason": "Top-3 explicitly states that __next__ raises StopIteration at exhaustion."
+    },
+    {
+      "strategy": "A",
+      "question_id": "q18",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        1
+      ],
+      "reason": "Top-3 contains the exact venv command and surrounding environment-creation context."
+    },
+    {
+      "strategy": "A",
+      "question_id": "q19",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        1
+      ],
+      "reason": "Top-3 explains the inexact binary representation behind the failed decimal equality."
+    },
+    {
+      "strategy": "A",
+      "question_id": "q20",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        2
+      ],
+      "reason": "Top-3 states what doctest scans and validates in docstrings."
+    },
+    {
+      "strategy": "B",
+      "question_id": "q16",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        1
+      ],
+      "reason": "Top-3 states the class-versus-instance variable distinction and retains page 84."
+    },
+    {
+      "strategy": "B",
+      "question_id": "q17",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        1
+      ],
+      "reason": "Top-3 explicitly states that __next__ raises StopIteration at exhaustion."
+    },
+    {
+      "strategy": "B",
+      "question_id": "q18",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        3
+      ],
+      "reason": "Top-3 contains the exact venv command and surrounding environment-creation context."
+    },
+    {
+      "strategy": "B",
+      "question_id": "q19",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        2
+      ],
+      "reason": "Top-3 explains the inexact binary representation behind the failed decimal equality."
+    },
+    {
+      "strategy": "B",
+      "question_id": "q20",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        1
+      ],
+      "reason": "Top-3 states what doctest scans and validates in docstrings."
+    },
+    {
+      "strategy": "C",
+      "question_id": "q16",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        1
+      ],
+      "reason": "Top-3 states the class-versus-instance variable distinction and retains page 84."
+    },
+    {
+      "strategy": "C",
+      "question_id": "q17",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        1
+      ],
+      "reason": "Top-3 explicitly states that __next__ raises StopIteration at exhaustion."
+    },
+    {
+      "strategy": "C",
+      "question_id": "q18",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        2
+      ],
+      "reason": "Top-3 contains the exact venv command and surrounding environment-creation context."
+    },
+    {
+      "strategy": "C",
+      "question_id": "q19",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        2
+      ],
+      "reason": "Top-3 explains the inexact binary representation behind the failed decimal equality."
+    },
+    {
+      "strategy": "C",
+      "question_id": "q20",
+      "score_0_to_2": 2,
+      "evidence_ranks": [
+        1
+      ],
+      "reason": "Top-3 states what doctest scans and validates in docstrings."
+    }
+  ],
+  "summary": {
+    "coherence": {
+      "A": {
+        "score_sum": 11,
+        "samples": 10,
+        "average_out_of_2": 1.1
+      },
+      "B": {
+        "score_sum": 18,
+        "samples": 10,
+        "average_out_of_2": 1.8
+      },
+      "C": {
+        "score_sum": 18,
+        "samples": 10,
+        "average_out_of_2": 1.8
+      }
+    },
+    "metadata": {
+      "A": {
+        "complete_and_correct": 15,
+        "records": 15
+      },
+      "B": {
+        "complete_and_correct": 15,
+        "records": 15
+      },
+      "C": {
+        "complete_and_correct": 15,
+        "records": 15
+      }
+    },
+    "grounding": {
+      "A": {
+        "score_counts": {
+          "0": 0,
+          "1": 0,
+          "2": 5
+        },
+        "average_out_of_2": 2.0
+      },
+      "B": {
+        "score_counts": {
+          "0": 0,
+          "1": 0,
+          "2": 5
+        },
+        "average_out_of_2": 2.0
+      },
+      "C": {
+        "score_counts": {
+          "0": 0,
+          "1": 0,
+          "2": 5
+        },
+        "average_out_of_2": 2.0
+      }
+    },
+    "filter": {
+      "A": "N/A (strategy does not apply metadata filters)",
+      "B": "N/A (strategy does not apply metadata filters)",
+      "C": {
+        "compliant_records": 3,
+        "checked_records": 3,
+        "compliant_questions": 1,
+        "checked_questions": 1
+      }
+    }
+  }
+}
