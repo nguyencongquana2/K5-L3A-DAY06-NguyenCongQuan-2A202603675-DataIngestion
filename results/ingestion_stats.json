@@ -1,0 +1,30 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "dimensions": 384,
+  "vector_store": "Chroma 1.5.9",
+  "metric": "cosine",
+  "cost_usd": 0,
+  "strategies": {
+    "A": {
+      "chunk_count": 381,
+      "stored_count": 381,
+      "elapsed_seconds": 10.762,
+      "chunking": "fixed size=800 overlap=120",
+      "filter": false
+    },
+    "B": {
+      "chunk_count": 308,
+      "stored_count": 308,
+      "elapsed_seconds": 8.519,
+      "chunking": "paragraph max_size=1000",
+      "filter": false
+    },
+    "C": {
+      "chunk_count": 308,
+      "stored_count": 308,
+      "elapsed_seconds": 0.467,
+      "chunking": "paragraph max_size=1000",
+      "filter": true
+    }
+  }
+}

@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed characters,800,120,"document_id;source;page;category;release",none,sentence-transformers/all-MiniLM-L6-v2,"Fixed windows are a simple baseline but may cut semantic units",6/15,10/15,4/5,5/5,"381 chunks; cosine; Chroma 1.5.9"
+B,PDF paragraph blocks,1000,0,"document_id;source;page;category;release",none,sentence-transformers/all-MiniLM-L6-v2,"Paragraph-aware chunks should retain evidence more coherently",9/15,13/15,3/5,5/5,"308 chunks; selected on dev Evidence Hit@3"
+C,PDF paragraph blocks,1000,0,"document_id;source;page;category;release",caller-supplied category,sentence-transformers/all-MiniLM-L6-v2,"A trusted category filter should remove cross-section distractors",9/15,13/15,3/5,5/5,"Filter applies only to q07 q10 q18; aggregate exact-hit metrics tie B"
