@@ -1,0 +1,28 @@
+{
+  "corpus_pages": 101,
+  "empty_or_error_pages": [],
+  "A_fixed_800_overlap_120": {
+    "count": 381,
+    "total_characters": 265139,
+    "minimum": 130,
+    "median": 794,
+    "mean": 695.9,
+    "maximum": 799
+  },
+  "B_paragraph_max_1000": {
+    "count": 308,
+    "total_characters": 231171,
+    "minimum": 25,
+    "median": 847.5,
+    "mean": 750.56,
+    "maximum": 1000
+  },
+  "C_paragraph_max_1000_with_filter": {
+    "count": 308,
+    "total_characters": 231171,
+    "minimum": 25,
+    "median": 847.5,
+    "mean": 750.56,
+    "maximum": 1000
+  }
+}
