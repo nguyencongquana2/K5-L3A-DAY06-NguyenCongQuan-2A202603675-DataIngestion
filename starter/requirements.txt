@@ -1,4 +1,6 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
-psycopg[binary]==3.3.8
-pypdf>=5,<7
+# Reproducible local pipeline: PDF extraction, semantic embeddings and vector store.
+pymupdf==2.1
+chromadb==1.5.9
+sentence-transformers==6.3.0
 python-dotenv>=1,<2
+pytest>=9,<10

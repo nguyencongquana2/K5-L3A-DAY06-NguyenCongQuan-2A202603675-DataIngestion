@@ -1,0 +1,1145 @@
+{
+  "manifest_version": 1,
+  "generated_at": "2026-11-13",
+  "source_id": "python-tutorial-3.13.7",
+  "title": "Python Tutorial, Release 3.13.7",
+  "source_path_or_url": {
+    "local": "data/source/tutorial.pdf",
+    "download_page": "https://docs.python.org/3.13/download.html",
+    "archive": "https://docs.python.org/3.13/archives/python-3.13-docs-pdf-a4.zip"
+  },
+  "license_or_permission": {
+    "name": "Python Software Foundation License Version 2",
+    "url": "https://docs.python.org/3.13/license.html",
+    "note": "Documentation may be used, modified and distributed under the stated license; code examples are additionally Zero-Clause BSD licensed."
+  },
+  "accessed_at": "2026-11-13",
+  "snapshot": {
+    "release": "3.13.7",
+    "pdf_creation_date": "2025-10-01",
+    "sha256": "7e934cd7d3acbe31d5590391148231b2d185a92d0b843d4daee82913ec1907ef"
+  },
+  "counting_rule": {
+    "physical_pages": 167,
+    "candidate_tutorial_pages": [
+      9,
+      122
+    ],
+    "minimum_normalized_characters": 500,
+    "excluded_sections": [
+      "cover",
+      "contents",
+      "glossary",
+      "license appendices",
+      "index"
+    ],
+    "content_page_count": 101,
+    "content_pages": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      93,
+      94,
+      95,
+      96,
+      97,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      107,
+      108,
+      109,
+      111,
+      113,
+      115,
+      116,
+      117,
+      118,
+      119,
+      121,
+      122
+    ]
+  },
+  "page_inventory": [
+    {
+      "page": 1,
+      "normalized_characters": 146,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 2,
+      "normalized_characters": 0,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 3,
+      "normalized_characters": 3950,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 4,
+      "normalized_characters": 5337,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 5,
+      "normalized_characters": 4770,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 6,
+      "normalized_characters": 2000,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 7,
+      "normalized_characters": 2202,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 8,
+      "normalized_characters": 42,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 9,
+      "normalized_characters": 3749,
+      "counted_as_content": true,
+      "category": "appetite"
+    },
+    {
+      "page": 10,
+      "normalized_characters": 734,
+      "counted_as_content": true,
+      "category": "appetite"
+    },
+    {
+      "page": 11,
+      "normalized_characters": 2849,
+      "counted_as_content": true,
+      "category": "interpreter"
+    },
+    {
+      "page": 12,
+      "normalized_characters": 2883,
+      "counted_as_content": true,
+      "category": "interpreter"
+    },
+    {
+      "page": 13,
+      "normalized_characters": 2006,
+      "counted_as_content": true,
+      "category": "basics"
+    },
+    {
+      "page": 14,
+      "normalized_characters": 1951,
+      "counted_as_content": true,
+      "category": "basics"
+    },
+    {
+      "page": 15,
+      "normalized_characters": 2566,
+      "counted_as_content": true,
+      "category": "basics"
+    },
+    {
+      "page": 16,
+      "normalized_characters": 1627,
+      "counted_as_content": true,
+      "category": "basics"
+    },
+    {
+      "page": 17,
+      "normalized_characters": 2135,
+      "counted_as_content": true,
+      "category": "basics"
+    },
+    {
+      "page": 18,
+      "normalized_characters": 1728,
+      "counted_as_content": true,
+      "category": "basics"
+    },
+    {
+      "page": 19,
+      "normalized_characters": 1869,
+      "counted_as_content": true,
+      "category": "basics"
+    },
+    {
+      "page": 20,
+      "normalized_characters": 1634,
+      "counted_as_content": true,
+      "category": "basics"
+    },
+    {
+      "page": 21,
+      "normalized_characters": 1657,
+      "counted_as_content": true,
+      "category": "basics"
+    },
+    {
+      "page": 22,
+      "normalized_characters": 80,
+      "counted_as_content": false,
+      "category": "basics"
+    },
+    {
+      "page": 23,
+      "normalized_characters": 1770,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 24,
+      "normalized_characters": 1429,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 25,
+      "normalized_characters": 1921,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 26,
+      "normalized_characters": 2405,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 27,
+      "normalized_characters": 2032,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 28,
+      "normalized_characters": 2134,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 29,
+      "normalized_characters": 2300,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 30,
+      "normalized_characters": 3605,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 31,
+      "normalized_characters": 1811,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 32,
+      "normalized_characters": 2532,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 33,
+      "normalized_characters": 1870,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 34,
+      "normalized_characters": 2040,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 35,
+      "normalized_characters": 2136,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 36,
+      "normalized_characters": 2716,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 37,
+      "normalized_characters": 3052,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 38,
+      "normalized_characters": 2286,
+      "counted_as_content": true,
+      "category": "control_flow"
+    },
+    {
+      "page": 39,
+      "normalized_characters": 1965,
+      "counted_as_content": true,
+      "category": "data_structures"
+    },
+    {
+      "page": 40,
+      "normalized_characters": 2215,
+      "counted_as_content": true,
+      "category": "data_structures"
+    },
+    {
+      "page": 41,
+      "normalized_characters": 2187,
+      "counted_as_content": true,
+      "category": "data_structures"
+    },
+    {
+      "page": 42,
+      "normalized_characters": 2025,
+      "counted_as_content": true,
+      "category": "data_structures"
+    },
+    {
+      "page": 43,
+      "normalized_characters": 1849,
+      "counted_as_content": true,
+      "category": "data_structures"
+    },
+    {
+      "page": 44,
+      "normalized_characters": 2693,
+      "counted_as_content": true,
+      "category": "data_structures"
+    },
+    {
+      "page": 45,
+      "normalized_characters": 2879,
+      "counted_as_content": true,
+      "category": "data_structures"
+    },
+    {
+      "page": 46,
+      "normalized_characters": 1555,
+      "counted_as_content": true,
+      "category": "data_structures"
+    },
+    {
+      "page": 47,
+      "normalized_characters": 1582,
+      "counted_as_content": true,
+      "category": "data_structures"
+    },
+    {
+      "page": 48,
+      "normalized_characters": 3373,
+      "counted_as_content": true,
+      "category": "data_structures"
+    },
+    {
+      "page": 49,
+      "normalized_characters": 2066,
+      "counted_as_content": true,
+      "category": "modules"
+    },
+    {
+      "page": 50,
+      "normalized_characters": 2859,
+      "counted_as_content": true,
+      "category": "modules"
+    },
+    {
+      "page": 51,
+      "normalized_characters": 2150,
+      "counted_as_content": true,
+      "category": "modules"
+    },
+    {
+      "page": 52,
+      "normalized_characters": 3747,
+      "counted_as_content": true,
+      "category": "modules"
+    },
+    {
+      "page": 53,
+      "normalized_characters": 2883,
+      "counted_as_content": true,
+      "category": "modules"
+    },
+    {
+      "page": 54,
+      "normalized_characters": 2983,
+      "counted_as_content": true,
+      "category": "modules"
+    },
+    {
+      "page": 55,
+      "normalized_characters": 3127,
+      "counted_as_content": true,
+      "category": "modules"
+    },
+    {
+      "page": 56,
+      "normalized_characters": 3012,
+      "counted_as_content": true,
+      "category": "modules"
+    },
+    {
+      "page": 57,
+      "normalized_characters": 525,
+      "counted_as_content": true,
+      "category": "modules"
+    },
+    {
+      "page": 58,
+      "normalized_characters": 53,
+      "counted_as_content": false,
+      "category": "modules"
+    },
+    {
+      "page": 59,
+      "normalized_characters": 2781,
+      "counted_as_content": true,
+      "category": "input_output"
+    },
+    {
+      "page": 60,
+      "normalized_characters": 2204,
+      "counted_as_content": true,
+      "category": "input_output"
+    },
+    {
+      "page": 61,
+      "normalized_characters": 2428,
+      "counted_as_content": true,
+      "category": "input_output"
+    },
+    {
+      "page": 62,
+      "normalized_characters": 1807,
+      "counted_as_content": true,
+      "category": "input_output"
+    },
+    {
+      "page": 63,
+      "normalized_characters": 3134,
+      "counted_as_content": true,
+      "category": "input_output"
+    },
+    {
+      "page": 64,
+      "normalized_characters": 2310,
+      "counted_as_content": true,
+      "category": "input_output"
+    },
+    {
+      "page": 65,
+      "normalized_characters": 3110,
+      "counted_as_content": true,
+      "category": "input_output"
+    },
+    {
+      "page": 66,
+      "normalized_characters": 861,
+      "counted_as_content": true,
+      "category": "input_output"
+    },
+    {
+      "page": 67,
+      "normalized_characters": 1727,
+      "counted_as_content": true,
+      "category": "exceptions"
+    },
+    {
+      "page": 68,
+      "normalized_characters": 3109,
+      "counted_as_content": true,
+      "category": "exceptions"
+    },
+    {
+      "page": 69,
+      "normalized_characters": 2244,
+      "counted_as_content": true,
+      "category": "exceptions"
+    },
+    {
+      "page": 70,
+      "normalized_characters": 1974,
+      "counted_as_content": true,
+      "category": "exceptions"
+    },
+    {
+      "page": 71,
+      "normalized_characters": 1701,
+      "counted_as_content": true,
+      "category": "exceptions"
+    },
+    {
+      "page": 72,
+      "normalized_characters": 2313,
+      "counted_as_content": true,
+      "category": "exceptions"
+    },
+    {
+      "page": 73,
+      "normalized_characters": 1826,
+      "counted_as_content": true,
+      "category": "exceptions"
+    },
+    {
+      "page": 74,
+      "normalized_characters": 2656,
+      "counted_as_content": true,
+      "category": "exceptions"
+    },
+    {
+      "page": 75,
+      "normalized_characters": 1302,
+      "counted_as_content": true,
+      "category": "exceptions"
+    },
+    {
+      "page": 76,
+      "normalized_characters": 2076,
+      "counted_as_content": true,
+      "category": "exceptions"
+    },
+    {
+      "page": 77,
+      "normalized_characters": 416,
+      "counted_as_content": false,
+      "category": "exceptions"
+    },
+    {
+      "page": 78,
+      "normalized_characters": 67,
+      "counted_as_content": false,
+      "category": "exceptions"
+    },
+    {
+      "page": 79,
+      "normalized_characters": 3758,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 80,
+      "normalized_characters": 4969,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 81,
+      "normalized_characters": 1603,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 82,
+      "normalized_characters": 3194,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 83,
+      "normalized_characters": 2994,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 84,
+      "normalized_characters": 1568,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 85,
+      "normalized_characters": 2427,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 86,
+      "normalized_characters": 3164,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 87,
+      "normalized_characters": 3639,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 88,
+      "normalized_characters": 2243,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 89,
+      "normalized_characters": 1749,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 90,
+      "normalized_characters": 2079,
+      "counted_as_content": true,
+      "category": "classes"
+    },
+    {
+      "page": 91,
+      "normalized_characters": 335,
+      "counted_as_content": false,
+      "category": "classes"
+    },
+    {
+      "page": 92,
+      "normalized_characters": 53,
+      "counted_as_content": false,
+      "category": "classes"
+    },
+    {
+      "page": 93,
+      "normalized_characters": 1501,
+      "counted_as_content": true,
+      "category": "standard_library"
+    },
+    {
+      "page": 94,
+      "normalized_characters": 1933,
+      "counted_as_content": true,
+      "category": "standard_library"
+    },
+    {
+      "page": 95,
+      "normalized_characters": 1804,
+      "counted_as_content": true,
+      "category": "standard_library"
+    },
+    {
+      "page": 96,
+      "normalized_characters": 1936,
+      "counted_as_content": true,
+      "category": "standard_library"
+    },
+    {
+      "page": 97,
+      "normalized_characters": 2725,
+      "counted_as_content": true,
+      "category": "standard_library"
+    },
+    {
+      "page": 98,
+      "normalized_characters": 191,
+      "counted_as_content": false,
+      "category": "standard_library"
+    },
+    {
+      "page": 99,
+      "normalized_characters": 1632,
+      "counted_as_content": true,
+      "category": "standard_library_advanced"
+    },
+    {
+      "page": 100,
+      "normalized_characters": 2499,
+      "counted_as_content": true,
+      "category": "standard_library_advanced"
+    },
+    {
+      "page": 101,
+      "normalized_characters": 2109,
+      "counted_as_content": true,
+      "category": "standard_library_advanced"
+    },
+    {
+      "page": 102,
+      "normalized_characters": 3004,
+      "counted_as_content": true,
+      "category": "standard_library_advanced"
+    },
+    {
+      "page": 103,
+      "normalized_characters": 2033,
+      "counted_as_content": true,
+      "category": "standard_library_advanced"
+    },
+    {
+      "page": 104,
+      "normalized_characters": 2441,
+      "counted_as_content": true,
+      "category": "standard_library_advanced"
+    },
+    {
+      "page": 105,
+      "normalized_characters": 179,
+      "counted_as_content": false,
+      "category": "standard_library_advanced"
+    },
+    {
+      "page": 106,
+      "normalized_characters": 92,
+      "counted_as_content": false,
+      "category": "standard_library_advanced"
+    },
+    {
+      "page": 107,
+      "normalized_characters": 2615,
+      "counted_as_content": true,
+      "category": "virtual_environments"
+    },
+    {
+      "page": 108,
+      "normalized_characters": 2300,
+      "counted_as_content": true,
+      "category": "virtual_environments"
+    },
+    {
+      "page": 109,
+      "normalized_characters": 1829,
+      "counted_as_content": true,
+      "category": "virtual_environments"
+    },
+    {
+      "page": 110,
+      "normalized_characters": 81,
+      "counted_as_content": false,
+      "category": "virtual_environments"
+    },
+    {
+      "page": 111,
+      "normalized_characters": 3014,
+      "counted_as_content": true,
+      "category": "next_steps"
+    },
+    {
+      "page": 112,
+      "normalized_characters": 57,
+      "counted_as_content": false,
+      "category": "next_steps"
+    },
+    {
+      "page": 113,
+      "normalized_characters": 1961,
+      "counted_as_content": true,
+      "category": "next_steps"
+    },
+    {
+      "page": 114,
+      "normalized_characters": 98,
+      "counted_as_content": false,
+      "category": "next_steps"
+    },
+    {
+      "page": 115,
+      "normalized_characters": 2272,
+      "counted_as_content": true,
+      "category": "floating_point"
+    },
+    {
+      "page": 116,
+      "normalized_characters": 3100,
+      "counted_as_content": true,
+      "category": "floating_point"
+    },
+    {
+      "page": 117,
+      "normalized_characters": 3250,
+      "counted_as_content": true,
+      "category": "floating_point"
+    },
+    {
+      "page": 118,
+      "normalized_characters": 2313,
+      "counted_as_content": true,
+      "category": "floating_point"
+    },
+    {
+      "page": 119,
+      "normalized_characters": 1050,
+      "counted_as_content": true,
+      "category": "floating_point"
+    },
+    {
+      "page": 120,
+      "normalized_characters": 97,
+      "counted_as_content": false,
+      "category": "floating_point"
+    },
+    {
+      "page": 121,
+      "normalized_characters": 2957,
+      "counted_as_content": true,
+      "category": "appendix"
+    },
+    {
+      "page": 122,
+      "normalized_characters": 2142,
+      "counted_as_content": true,
+      "category": "appendix"
+    },
+    {
+      "page": 123,
+      "normalized_characters": 2378,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 124,
+      "normalized_characters": 3538,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 125,
+      "normalized_characters": 3191,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 126,
+      "normalized_characters": 3506,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 127,
+      "normalized_characters": 3302,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 128,
+      "normalized_characters": 3398,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 129,
+      "normalized_characters": 2965,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 130,
+      "normalized_characters": 3576,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 131,
+      "normalized_characters": 4361,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 132,
+      "normalized_characters": 2712,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 133,
+      "normalized_characters": 3345,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 134,
+      "normalized_characters": 3194,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 135,
+      "normalized_characters": 3348,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 136,
+      "normalized_characters": 2397,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 137,
+      "normalized_characters": 3497,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 138,
+      "normalized_characters": 2789,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 139,
+      "normalized_characters": 1614,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 140,
+      "normalized_characters": 56,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 141,
+      "normalized_characters": 1148,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 142,
+      "normalized_characters": 72,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 143,
+      "normalized_characters": 2281,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 144,
+      "normalized_characters": 2953,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 145,
+      "normalized_characters": 3366,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 146,
+      "normalized_characters": 3397,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 147,
+      "normalized_characters": 2597,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 148,
+      "normalized_characters": 3000,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 149,
+      "normalized_characters": 2494,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 150,
+      "normalized_characters": 2367,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 151,
+      "normalized_characters": 2601,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 152,
+      "normalized_characters": 2514,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 153,
+      "normalized_characters": 2730,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 154,
+      "normalized_characters": 3244,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 155,
+      "normalized_characters": 2952,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 156,
+      "normalized_characters": 3022,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 157,
+      "normalized_characters": 2774,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 158,
+      "normalized_characters": 2343,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 159,
+      "normalized_characters": 2986,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 160,
+      "normalized_characters": 2814,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 161,
+      "normalized_characters": 1184,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 162,
+      "normalized_characters": 67,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 163,
+      "normalized_characters": 418,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 164,
+      "normalized_characters": 57,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 165,
+      "normalized_characters": 1387,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 166,
+      "normalized_characters": 1609,
+      "counted_as_content": false,
+      "category": null
+    },
+    {
+      "page": 167,
+      "normalized_characters": 1379,
+      "counted_as_content": false,
+      "category": null
+    }
+  ]
+}

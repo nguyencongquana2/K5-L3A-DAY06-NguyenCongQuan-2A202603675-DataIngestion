@@ -1,23 +1,29 @@
-"""Read-only setup check; this is a utility, not the student pipeline solution."""
-import os
-import sys
+"""Validate local dependencies and the selected corpus without modifying data."""
 from pathlib import Path
 
-import psycopg
-from dotenv import load_dotenv
+import chromadb
+import pymupdf
+import sentence_transformers
 
-load_dotenv(Path(__file__).resolve().parents[1] / '.env')
-url = os.getenv('DATABASE_URL')
-if not url:
-    sys.exit('DATABASE_URL missing: copy starter/.env.example to starter/.env first.')
-try:
-    with psycopg.connect(url, connect_timeout=5) as connection:
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT current_database(), current_setting('server_version'), extversion FROM pg_extension WHERE extname = 'vector'")
-            row = cursor.fetchone()
-            if not row:
-                sys.exit('Connected, but pgvector extension is missing. See starter/README.md.')
-            print(f'Database: {row[0]} | PostgreSQL: {row[1]} | pgvector: {row[2]}')
-except psycopg.Error:
-    sys.exit('Database connection failed. Check Docker, port and DATABASE_URL in starter/.env.')
-print('Setup OK. Pipeline functions still need to be implemented.')
+
+ROOT = Path(__file__).resolve().parents[2]
+PDF_PATH = ROOT / "data" / "source" / "tutorial.pdf"
+
+if not PDF_PATH.exists():
+    raise SystemExit(f"Corpus missing: {PDF_PATH}")
+
+with pymupdf.open(PDF_PATH) as document:
+    if document.page_count < 30:
+        raise SystemExit(f"Corpus has only {document.page_count} physical pages")
+    sample = document[8].get_text().strip()
+    if not sample:
+        raise SystemExit("PDF opens but page 9 has no extractable text")
+    print(f"Corpus: {PDF_PATH.name} | physical pages: {document.page_count}")
+
+print(
+    "Dependencies: "
+    f"PyMuPDF {pymupdf.__version__} | "
+    f"Chroma {chromadb.__version__} | "
+    f"sentence-transformers {sentence_transformers.__version__}"
+)
+print("Setup OK")

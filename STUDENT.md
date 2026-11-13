@@ -1,8 +1,8 @@
 # Thông tin học viên
 
-- Họ và tên:
-- MSSV:
-- Lớp: L3A / L3B / khác:
-- Chủ đề và corpus:
-- Repo bài nộp:
-- Commit chốt bài:
+- Họ và tên: Nguyễn Công Quân
+- MSSV: 2A202603675
+- Lớp: L3A
+- Chủ đề và corpus: Truy xuất kiến thức từ Python Tutorial 3.13.7 (Python Software Foundation)
+- Repo bài nộp: https://github.com/nguyencongquana2/K5-L3A-DAY06-NguyenCongQuan-2A202603675-DataIngestion
+- Commit chốt bài: Cập nhật sau khi hoàn tất benchmark
